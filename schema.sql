@@ -36,3 +36,9 @@ VALUES (
     'admin@project2.com',
     '$2y$10$DbWtBAgqu9qTDuKtHv7g7uINuQxySwc2m9mbOwDWEfBK2TphFRFyy'
 );
+
+--Test issue 
+INSERT INTO Issues (title, description, type, priority, status, assigned_to, created_by, created_at) 
+VALUES ('Sample Issue', 'Test issue.', 'Bug', 'High', 'Open', 1, 1, NOW());
+
+
