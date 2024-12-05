@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - BugMe Issue Tracker</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <img src="bug.png" alt="Bug Icon">
+        <h1>BugMe Issue Tracker</h1>
+    </header>
+
+    <!-- Sidebar Nav -->
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="dashboard.html"><img id="home" src="home.png" alt="Home Icon">Home</a></li>
+                <li><a href="add_user.html"><img src="add.png" alt="Add User Icon">Add User</a></li>
+                <li><a href="new_issue.html"><img src="issue.jpg" alt="New Issue Icon">New Issue</a></li>
+                <li><a href="logout.php"><img src="logout.png" alt="Logout Icon"> Logout</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+        <!-- Issues Header -->
+        <header class="issues-header">
+            <h2>Issues</h2>
+            <button onclick="window.location.href='new_issue.html'" class="create-issue-button">
+                Create New Issue
+            </button>
+        </header>
+
+        <!-- Filters Section -->
+        <section class="filters">
+            <p>Filter by:</p>
+            <button id="filter-all">ALL</button>
+            <button id="filter-open">OPEN</button>
+            <button id="filter-my">MY TICKETS</button>
+        </section>
+
+        <!-- Issues Table -->
+        <section class="issues-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ticket ID</th>
+                        <th>Title</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                        <th>Assigned To</th>
+                        <th>Created</th>
+                    </tr>
+                </thead>
+                <tbody id="issues-table">
+                    <!-- table rows will be added here using the AJAX -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
