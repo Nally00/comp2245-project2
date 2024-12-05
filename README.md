@@ -5,3 +5,5 @@ Darian Brown,
 June Douglas,
 Maldrick Weekes,
 Kemier Francis 
+
+**Please import the schema file into MySQL using phpMyAdmin**
