@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - BugMe Issue Tracker</title>
+    <link rel="stylesheet" href="add-user.css">
+
+</head>
+<body>
+    <header class="main-header">
+        <img src="bug.png" alt="Bug Icon">
+        <h1>BugMe Issue Tracker</h1>
+    </header>
+
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="dashboard.html"><img id="home" src="home.png" alt="Home Icon">Home</a></li>
+                <li><a href="add-user.html"><img src="add.png" alt="Add User Icon">Add User</a></li>
+                <li><a href="new_issue.html"><img src="issue.jpg" alt="New Issue Icon">New Issue</a></li>
+                <li>
+                    <button id="LogoutBtn" class="logout-button">
+                        <img src="logout.png" alt="Logout Icon"> 
+                        <span>Logout</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </aside>        
+        
+        <main class="content-area">
+            <h2>New User</h2>
+
+            <form id="addUserForm" class="input-form" novalidate>
+                <div class="form-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+
+        </main>
+        <script src="add-user.js"></script>
+        <script src="LogOut.js"></script>
+
+    </div>
+
+</body>
+
+</html>
