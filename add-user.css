@@ -1,6 +1,9 @@
+/* Base Styles */
+
+
 body {
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     background-color: #f8f9fa;
     color: #333;
     display: flex;
@@ -43,9 +46,10 @@ body {
 
 .sidebar img {
     width:17px;
-    height: 16px;
+    height: 17px;
     margin-right: 10px;
 }
+
 
 #user {
     width:18px;
@@ -90,6 +94,7 @@ li:hover {
     align-items: center;
     text-decoration: none;
     padding: 10px 20px;
+    
 }
 
 .logout-button span{
@@ -107,119 +112,73 @@ li:hover {
     margin-right: 10px;
 }
 
-/* Main Content */
 
-.dashboard-content {
+/* Main Content Area */
+.content-area {
     margin-left: 250px; 
     padding: 40px; 
-    padding-top: 100px; 
+    padding-top: 80px; 
     width: 75%;
 }
 
-/* Issues Header */
-.issues-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 35px;
+.content-area h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #333;
 }
 
-.issues-header h2 {
-    font-size:35px;
-    margin: 0;
+/* Form Styles */
+.input-form {
+    max-width: 600px;
 }
 
-.create-issue-button {
-    padding: 10px 15px;
-    background-color: #28a745;
-    font-weight: bold;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.create-issue-button:hover {
-    background-color: #165a25;
-}
-
-/* Filters Section */
-.filters {
-    display: flex;
-    align-items: center;
+.form-group {
     margin-bottom: 20px;
-    gap: 20px;
 }
 
-.filters p {
-    margin-right: 10px;
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
     font-weight: bold;
+}
+
+.form-group input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     font-size: 15px;
 }
 
-.filters button {
-    margin-right: 10px;
-    padding: 10px 25px;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+.form-group input:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 3px rgba(0,102,204,0.2);
 }
 
-.filters button:hover {
-    background-color: #e9f2fc;
-}
-
-.filters button.selected {
-    background-color: #044b97;
+.submit-button {
+    background-color: #0066cc;
     color: white;
-}
-
-/* Issues Table */
-.issues-table {
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table th, table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-table th {
-    background-color: #f8f9fa;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #6c757d;
-}
-
-table tr:hover {
-    background-color: #f1f1f1;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 14px;
 }
 
-/* Status Styling */
-.status-open {
-    color: #28a745;
-    font-weight: bold;
+.submit-button:hover {
+    background-color: #0052a3;
 }
 
-.status-closed {
-    color: #dc3545;
-    font-weight: bold;
+/* Error Messages */
+
+.error-message {
+    color: #dc3545; /* Red for errors */
+    font-size: 14px;
+    margin-top: 5px;
+    display: block; /* Force it to act like a block element under inputs */
 }
 
-.status-in-progress {
-    color: #ffc107;
-    font-weight: bold;
+input.input-invalid {
+    border: 1px solid red;
 }

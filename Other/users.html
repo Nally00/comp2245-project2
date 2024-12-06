@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BugMe Issue Tracker - Users</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <span class="icon">🐞</span>
+        <h1>BugMe Issue Tracker</h1>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <span class="icon">🏠</span>
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="users.html" class="nav-link">
+                        <span class="icon">👥</span>
+                        Users
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="add-user.html" class="nav-link">
+                        <span class="icon">👤</span>
+                        Add User
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="new-issue.html" class="nav-link">
+                        <span class="icon">➕</span>
+                        New Issue
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="logoutBtn">
+                        <span class="icon">🚪</span>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div id="authMessage" class="alert alert-error" style="display: none;">
+                Please log in to access this page.
+            </div>
+
+            <div id="mainContent" style="display: none;">
+                <div class="section-header">
+                    <h2 class="page-title">Users List</h2>
+                    <a href="add-user.html" class="add-user-btn">
+                        <span class="icon">➕</span>
+                        Add New User
+                    </a>
+                </div>
+
+                <div class="users-container">
+                    <table class="users-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Date Created</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                            <!-- Data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
