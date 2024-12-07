@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", "initial-scale=1.0">
+        <title>Dashboard - BugMe Issue Tracker</title>
+        <link rel="stylesheet" href="new-form-issue.css">
+    </head>
+
+    <body>
+        <header class="main-header">
+            <img src="bug.png" alt="Bug Icon">
+            <h1>Create Issue</h1>
+        </header>
+    
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html"><img id="home" src="home.png" alt="Home Icon">Home</a></li>
+                    <li><a href="add-user.html"><img src="add.png" alt="Add User Icon">Add User</a></li>
+                    <li><a href="new_issue.html"><img src="issue.jpg" alt="New Issue Icon">New Issue</a></li>
+                    <li>
+                        <button id="LogoutBtn" class="logout-button">
+                            <img src="logout.png" alt="Logout Icon"> 
+                            <span>Logout</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </body>
+
+    <form id="create-issue-form">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label for="type">Type</label>
+        <select id="type" name="type" required>
+            <option value="Bug">Bug</option>
+            <option value="Proposal">Proposal</option>
+            <option value="Task">Task</option>
+        </select>
+
+        <label for="priority">Priority</label>
+        <select id="priority" name="priority" required>
+            <option value="Minor">Minor</option>
+            <option value="Major">Major</option>
+            <option value="Critical">Critical</option>
+        </select>
+
+        <label for="assigned_to">Assigned To</label>
+        <select id="assigned_to" name="assigned_to" required></select>
+
+        <button type="submit"> Create Issue</button>
+    </form>
+</html>
