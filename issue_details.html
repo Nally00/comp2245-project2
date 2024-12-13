@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BugMe Issue Tracker - Issue Details</title>
+    <link rel="stylesheet" href="issue_details.css">
+</head>
+<body>
+    <header class="main-header">
+        <img src="bug.png" alt="Bug Icon">
+        <h1>BugMe Issue Tracker</h1>
+    </header>
+
+    <!-- Sidebar Nav -->
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="dashboard.html"><img id="home" src="home.png" alt="Home Icon">Home</a></li>
+                <li><a href="add-user.html"><img src="add.png" alt="Add User Icon">Add User</a></li>
+                <li><a href="new-issue-form.html"><img src="issue.jpg" alt="New Issue Icon">New Issue</a></li>
+                <li>
+                    <button id="LogoutBtn" class="logout-button">
+                        <img src="logout.png" alt="Logout Icon"> 
+                        <span>Logout</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+        <main class="issue-details-content">
+            <div class="title-and-issue-number">
+                <h2 id="issue-title"></h2>
+                <p id="issue-number"><strong></strong></p>
+            </div>
+
+            <div class="issue-details">
+                <div class="details-and-dates">
+                    <p id="issue-description"></p>
+
+                    <div class="issue-dates">
+                        <p id="created-details"></p>
+                        <p id="updated-details"></p>
+                    </div>
+                </div>
+                
+                <div class="details-and-buttons">
+                    <div class="issue-meta">
+                        <p><strong>Assigned To:</strong> Tom Brady</p>
+                        <p><strong>Priority:</strong> Major</p>
+                        <p><strong>Status:</strong> Open</p>
+                    </div>
+    
+                    <div class="issue-actions">
+                        <button id="mark-closed">Mark as Closed</button>
+                        <button id="mark-progress">Mark In Progress</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    <script src="issue_details.js"></script>
+</body>
+</html>
