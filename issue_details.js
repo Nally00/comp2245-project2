@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fetch the issue details using AJAX
     function fetchIssueDetails(issueId) {
+        console.log("Fetching issue details...");
         fetch(`http://localhost/comp2245-project2/issue_details.php?issue_id=${issueId}`)
             .then((response) => {
                 if (!response.ok) {
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return response.json();
             })
             .then((data) => {
+                console.log("Data recieved:", data);
                 // Populate the HTML with the fetched details
                 document.getElementById("issue-title").textContent = `${data.title}`;
                 document.getElementById("issue-number").textContent = `Issue #${data.issue_number}`;
@@ -30,21 +32,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error('Fetch error:', error);
                 document.getElementById("issue-details-content").textContent = "Error fetching issue details.";
             });
+            $(document).ready(function() {
+                $.ajax({
+                    url: "http://localhost/comp2245-project2/issue_details.php?issue_id=1",
+                    method: "GET",
+                    success: function(data) {
+                        console.log("Data recieved:", data);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("AJAX request failed:", status, error);
+                    }
+
+                });
+            });
     }
 
     // Example: Call fetchIssueDetails with a specific issue ID
     //const issueId = 1; // Replace this with the actual issue ID to fetch
     fetchIssueDetails(issueId);
-
-    $.ajax({
-        url: "http://localhost/comp2245-project2/issue_details.php?issue_id=1",
-        method: "GET",
-        success: function(data) {
-            // Handle the response data
-        },
-        error: function(xhr, status, error) {
-            console.error("AJAX request failed:", status, error);
-        }
-    });
     
 });
