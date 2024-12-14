@@ -3,9 +3,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     const issueDetailsContainer = document.getElementById("issue-details");
 
+    let issueId = 1;
+
     // Fetch the issue details using AJAX
     function fetchIssueDetails(issueId) {
-        fetch(`fetch_issue_details.php?issue_id=${issueId}`)
+        fetch(`http://localhost/comp2245-project2/issue_details.php?issue_id=${issueId}`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Failed to fetch issue details");
@@ -25,12 +27,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("updated-details").textContent = `Last updated on ${data.date_updated}`;
             })
             .catch((error) => {
-                console.error(error);
-                issueDetailsContainer.textContent = "Error fetching issue details.";
+                console.error('Fetch error:', error);
+                document.getElementById("issue-details-content").textContent = "Error fetching issue details.";
             });
     }
 
     // Example: Call fetchIssueDetails with a specific issue ID
-    const issueId = 100; // Replace this with the actual issue ID to fetch
+    //const issueId = 1; // Replace this with the actual issue ID to fetch
     fetchIssueDetails(issueId);
+
+    $.ajax({
+        url: "http://localhost/comp2245-project2/issue_details.php?issue_id=1",
+        method: "GET",
+        success: function(data) {
+            // Handle the response data
+        },
+        error: function(xhr, status, error) {
+            console.error("AJAX request failed:", status, error);
+        }
+    });
+    
 });

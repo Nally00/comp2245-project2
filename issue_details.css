@@ -5,6 +5,7 @@ body {
   color: #333;
   display: flex;
   margin: 0;
+  padding-top: 60px;
 }
 
 /* Header */
@@ -16,6 +17,7 @@ body {
   padding: 10px;
   width: 100%;
   position: fixed;
+  top: 0;
   z-index: 1000;
 }
 
@@ -35,9 +37,11 @@ body {
   width: 250px;
   background-color: #eae9e9;
   height: 100vh;
-  padding-top: 65px;
   position: fixed;
+  top: 60px;
+  /*padding-top: 65px;
   border-right: 1px solid #ddd;
+  */
 }
 
 .sidebar img {
@@ -92,23 +96,36 @@ li:hover {
 }
 
 /* Main Content Area */
-.issue-details-content {
-  margin-left: 250px;
-  padding: 40px;
-  padding-top: 100px;
-  width: 75%;
+#issue-details-content {
+  margin-left: 260px;
+  padding: 20px;
+  margin-top: 60px;
+  /*padding-top: 100px;
+  width: 75%;*/
 }
 
 .issue-details {
   display: grid;
+  margin-top: 20px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   gap: 20px;
 }
 
 .title-and-issue-number {
-  grid-column: 1 / -1;
+  /* grid-column: 1 / -1 */
   text-align: center;
+  margin-bottom: 20px;
+}
+
+#issue-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#issue-number {
+  font-size: 18px;
+  color: #666;
 }
 
 .details-and-dates,
@@ -135,8 +152,6 @@ li:hover {
 
 }
 
-
-
 /* Issue Meta Information */
 .issue-meta {
   font-size: 14px;
@@ -144,6 +159,16 @@ li:hover {
 
 .issue-meta p {
   margin: 10px 0;
+}
+
+#issue-description,
+#issue-type,
+#issue-priority,
+#issue-status,
+#assigned-to,
+#created-details,
+#updated-details {
+  margin-bottom: 10px;
 }
 
 /* Issue Action Buttons */

@@ -6,7 +6,7 @@ while ($row = $result->fetch_assoc()) {
     echo "<option value='" . $row['id'] . "'>" . $row['firstname'] . " " . $row['lastname'] . "<option>";
 }
 
-include 'db_connection.php'; //database.php here
+include 'config.php'; //database.php here
 
 if ($SERVER['REQUEST_METHOD'] === 'POST') {
     $title = $_POST['title'];
