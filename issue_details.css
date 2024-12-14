@@ -1,0 +1,237 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  margin: 0;
+}
+
+/* Header */
+.main-header {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+
+.main-header h1 {
+  margin-left: 20px;
+  font-size: 25px;
+}
+
+.main-header img {
+  margin-left: 15px;
+  width: 40px;
+  height: 40px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #eae9e9;
+  height: 100vh;
+  padding-top: 65px;
+  position: fixed;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar img {
+  width: 17px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  padding: 12px 20px;
+}
+
+li:hover {
+  background-color: #e4f0fd;
+}
+
+/* Log out button */
+.logout-button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.logout-button span {
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+.logout-button img {
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+}
+
+/* Main Content Area */
+.issue-details-content {
+  margin-left: 250px;
+  padding: 40px;
+  padding-top: 100px;
+  width: 75%;
+}
+
+.issue-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 20px;
+}
+
+.title-and-issue-number {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.details-and-dates,
+.details-and-buttons {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.details-and-dates .issue-dates,
+.details-and-buttons .issue-meta {
+  margin-bottom: 20px;
+}
+
+.details-and-dates{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.details-and-buttons{
+  grid-column-start: 3;
+  grid-column-end: 4;
+
+}
+
+
+
+/* Issue Meta Information */
+.issue-meta {
+  font-size: 14px;
+}
+
+.issue-meta p {
+  margin: 10px 0;
+}
+
+/* Issue Action Buttons */
+.issue-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.issue-actions button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+}
+
+#mark-closed {
+  background-color: #0066cc;
+}
+
+#mark-progress {
+  background-color: #00cc22;
+}
+
+/* General Styling for Form */
+.issues-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.issues-header h2 {
+  font-size: 35px;
+  margin: 0;
+}
+
+.create-issue-button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.create-issue-button:hover {
+  background-color: #165a25;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.filters p {
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.filters button {
+  margin-right: 10px;
+  padding: 10px 25px;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.filters button:hover {
+  background-color: #e9f2fc;
+}
+
+.filters button.selected {
+  background-color: #044b97;
+  color: white;
+}
+
+.issues-table {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
