@@ -12,7 +12,6 @@
         <h1>BugMe Issue Tracker</h1>
     </header>
 
-    <!-- Sidebar Nav -->
     <aside class="sidebar">
         <nav>
             <ul>
@@ -29,38 +28,33 @@
         </nav>
     </aside>
 
-        <main id="issue-details-content">
-            <div class="title-and-issue-number">
+        <main class="issue-details-content">           
                 <h2 id="issue-title"></h2>
-                <p id="issue-number"><strong></strong></p>
-            </div>
-
-            <div class="issue-details">
-                <div class="details-and-dates">
+                <p id="issue-number"></p>
+                                
+                <div class="issue-details">
                     <p id="issue-description"></p>
-
                     <div class="issue-dates">
                         <p id="created-details"></p>
                         <p id="updated-details"></p>
-                    </div>
-                </div>
-                
-                <div class="details-and-buttons">
+                    </div>                               
+                    
                     <div class="issue-meta">
-                        <p><strong>Assigned To:</strong> Tom Brady</p>
-                        <p><strong>Priority:</strong> Major</p>
-                        <p><strong>Status:</strong> Open</p>
+                        <p id="assignedTo"></p>
+                        <p id="priority"></p>
+                        <p id="status"> </p>
                     </div>
-    
-                    <div class="issue-actions">
+        
+                    <div class="issue-status">
                         <button id="mark-closed">Mark as Closed</button>
                         <button id="mark-progress">Mark In Progress</button>
-                    </div>
+                    </div>   
+
                 </div>
             </div>
         </main>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="issue_details.js"></script>
+    <script src="LogOut.js"></script>
 </body>
 </html>
