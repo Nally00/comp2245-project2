@@ -4,9 +4,9 @@ Web Development
 Group Members:
 Naleka Beckford,
 June Douglas,
-Darian Brown,
+Kemier Francis, 
 Maldrick Weekes,
-Kemier Francis 
+Darian Brown,
 
 HOW TO RUN:
 
@@ -22,7 +22,7 @@ HOW TO RUN:
 
 3. Run the Application:
    - Ensure that Apache and MySQL is running on XAMPP.
-   - Access fiile by using the local host URL 
+   - Access file by using the local host URL 
    e.g  http://localhost/comp2245-project2/LogIn.html
    
    
@@ -33,7 +33,11 @@ HOW TO RUN:
    Email:       admin@project2.com
    Password:    password123
 
-   - Use the following credentials to log in as a non-admin user:
+   - You can use the following credentials to log in as a non-admin user:
 
    Email:       jane@gmail.com
    Password:    Password1
+
+   Email:       regina@gmail.com
+   Password:    Password1
+   
