@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BugMe Issue Tracker</title>
-        <link rel="stylesheet" href="new-form-issue.css">
+        <link rel="stylesheet" href="new-issue-form.css">
     </head>
 
     <body>
@@ -28,37 +28,55 @@
                     </ul>
                 </nav>
             </aside>
-            <main class="content">
+            <main class="content-area">
                 <h2>Create Issue</h2>
-                <form id="create-issue-form">
-                    <label for="title">Title</label>
-                    <input type="text" id="title" name="title" required>
-            
-                    <label for="description">Description</label>
-                    <textarea id="description" name="description" required></textarea>
-            
-                    <label for="type">Type</label>
-                    <select id="type" name="type" required>
-                        <option value="Bug">Bug</option>
-                        <option value="Proposal">Proposal</option>
-                        <option value="Task">Task</option>
-                    </select>
-            
-                    <label for="priority">Priority</label>
-                    <select id="priority" name="priority" required>
-                        <option value="Minor">Minor</option>
-                        <option value="Major">Major</option>
-                        <option value="Critical">Critical</option>
-                    </select>
-            
-                    <label for="assigned_to">Assigned To</label>
-                    <select id="assigned_to" name="assigned_to" required>
-                        <?php require 'new-form-issue.php'; ?>
-                    </select>
-            
-                    <button type="submit">Submit</button>
+
+                <form id="new-issue-form" class="input-form"novalidate>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <select id="type" name="type" required>
+                            <option value="" selected disabled>Select Type</option>
+                            <option value="Bug">Bug</option>
+                            <option value="Proposal">Proposal</option>
+                            <option value="Task">Task</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <select id="priority" name="priority" required>
+                            <option value="" selected disabled>Select Priority</option>
+                            <option value="Minor">Minor</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Major">Major</option>
+                            <option value="Critical">Critical</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assigned_to">Assigned To</label>
+                        <select id="assigned_to" name="assigned_to" required>
+                            <option value="" selected disabled>Select User</option>
+                             <!-- user names will be populated in the dropdown -->
+                        </select>
+                    </div>        
+                                      
+                    <button type="submit" class="submit-button">Submit</button>
                 </form>
             </main>
+            <script src="new-issue-form.js"></script>
+            <script src="LogOut.js"></script>
+
         </div>
     </body>
 </html>

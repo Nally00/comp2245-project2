@@ -5,7 +5,7 @@ header('Content-Type: application/json');
 // Include database configuration
 require_once 'config.php';
 
-// Check if user is logged 0n and is admin
+// Check if user is logged on and is admin
 if (!isset($_SESSION['user_id']) || $_SESSION['email'] !== 'admin@project2.com') {
     
     //if not, stop script
