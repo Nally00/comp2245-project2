@@ -21,7 +21,6 @@ body {
 
 .main-header h1 {
   margin-left: 20px;
-  font-size: 25px;
   font-size: 20px;
 }
 
@@ -139,12 +138,17 @@ li:hover {
   font-weight: bold;
 }
 
-.form-group input {
-  width: 80%;
+.form-group input{
+  width: 115%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 15px;
+}
+
+.form-group textarea {
+  width: 120%;
+  height: 80px;
 }
 
 .form-group input:focus {
@@ -154,7 +158,7 @@ li:hover {
 }
 
 .form-group select {
-  width: 80%;
+  width: 120%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -185,6 +189,7 @@ li:hover {
   display: block; 
 }
 
-input.input-invalid {
+.input-form .input-invalid {
   border: 1px solid red;
 }
+

@@ -11,7 +11,7 @@ if (!isset($pdo)) {
 // Check if user is logged on 
 if (!isset($_SESSION['user_id'])) {
     echo "<tr><td colspan='6'>Error: User not logged in.</td></tr>";
-    exit;
+    exit();
 }
 
 // Get the logged-in user's ID from the session

@@ -21,7 +21,6 @@ body {
 
 .main-header h1 {
     margin-left: 20px;
-    font-size: 25px;
     font-size: 20px;
 }
 
@@ -227,7 +226,8 @@ table tr:hover {
     border-radius: 10px;
     text-align: center; 
     display: inline-block; 
-    margin: 5px;
+    margin: 10px;
+    font-size: 12px;
 }
 
 .status-closed {
@@ -238,7 +238,8 @@ table tr:hover {
     border-radius: 10px;
     text-align: center; 
     display: inline-block; 
-    margin: 5px;
+    margin: 10px;
+    font-size: 12px;
 }
 
 .status-in-progress {
@@ -248,5 +249,6 @@ table tr:hover {
     border-radius: 10px;
     text-align: center; 
     display: inline-block; 
-    margin: 5px; 
+    margin: 10px; 
+    font-size: 12px;
 }
